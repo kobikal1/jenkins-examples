@@ -9,5 +9,12 @@ def foo():
     del b
     return a
 
+
+def get_free_mem_size():
+    return 8
+
+def get_total_hd_size():
+    return '30GB'
+
 if __name__ == '__main__':
     foo()
