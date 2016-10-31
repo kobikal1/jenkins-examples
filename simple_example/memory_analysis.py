@@ -7,6 +7,7 @@ def foo():
     b = [2] * (2 * 10 ** 7)
     # add dome lines here and push it to your branch
     # this is my change
+    # this is my change 2
     del b
     return a
 
