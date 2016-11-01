@@ -11,7 +11,6 @@ from os.path import join
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', '..')))
 
-print 'wpooooow', os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', '..'))
 from simple_example.memory_analysis import get_free_mem_size
 from simple_example.memory_analysis import get_total_hd_size
 
