@@ -15,7 +15,6 @@ from simple_example.memory_analysis import get_free_mem_size
 from simple_example.memory_analysis import get_total_hd_size
 
 
-
 class MemoryTest(unittest.TestCase):
     """Testing class for handling network utils
 
