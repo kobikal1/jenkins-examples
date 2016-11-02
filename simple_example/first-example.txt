@@ -1,0 +1,29 @@
+export PATH=/usr/local/bin:${WORKSPACE}/.jenkins_example/bin:$PATH
+export PYTHONPATH=$PYTHONPATH:${WORKSPACE}
+
+
+if [ -d ".jenkins_example" ]; then
+  echo "**> virtualenv exists"
+else
+  echo  "**> creating virtualenv"
+  virtualenv .jenkins_example
+fi
+
+
+. .jenkins_example/bin/activate
+
+
+echo "req install"
+pip install -r requierments.txt
+
+
+echo "test"
+py.test --html=report.html tests/
+
+
+echo "run"
+python simple_example/memory_analysis.py
+
+
+echo "coverage"
+py.test --cov-report xml --cov=simple_example tests/
